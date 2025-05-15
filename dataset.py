@@ -63,9 +63,3 @@ def get_rays(datapath, mode='train'):
 
     return rays_o, rays_d, target_px_values
 
-
-# batch_sz =1024
-
-o, d, target = get_rays('/home/thaoanh/Documents/TA/selfLearn/NeRF/udemy_nerf/data/fox/fox')
-# print(o.shape, d.shape, target.shape)
-# print(o)

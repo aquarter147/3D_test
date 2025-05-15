@@ -12,7 +12,7 @@ from rendering import rendering
 from model import Voxels, Nerf
 from ml_helpers import training
 
-test_o, test_d, test_target_px_values = get_rays('data/fox', mode='test')
+test_o, test_d, test_target_px_values = get_rays('/home/thaoanh/Documents/TA/selfLearn/NeRF/udemy_nerf/data/fox', mode='test')
 
 device = 'cuda'
 tn = 8.

@@ -68,7 +68,7 @@ class Nerf(nn.Module):
         self.Ldir = Ldir
         
     def positional_encoding(self, x, L):
-        out =[]
+        out=[]
         # TODO 4: Implement positional encoding:
         # x → [x, sin(2^0 * x), cos(2^0 * x), ..., sin(2^{L-1} * x), cos(2^{L-1} * x)]
         return torch.cat(out, dim=1)

@@ -40,7 +40,7 @@ def prepare_dataloader(o, d, rgb, batch_size=1024, crop_region=None):
 
 def main():
     # === Configuration ===
-    data_path = '/home/thaoanh/Documents/TA/selfLearn/NeRF/fox/fox'
+    data_path = 'data/fox'
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     # Hyperparameters
