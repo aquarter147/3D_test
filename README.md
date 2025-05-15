@@ -15,8 +15,13 @@ Read the paper about the rendering technique and complete the TODO code
 ### 2.2 Model (30 pts)
 Read the paper about the model architecture and complete the TODO code
 
-### 2.3 Optimize (40 pts)
-Run the test.py to test model. Optimize the model to have the best results. 
+### 2.3 Train the model
+You will need to train the model by running:
+
+`python nerf_train.py`
+
+### 2.4 Optimize (40 pts)
+Run the test.py to test model. Optimize the model to have the best results with PSNR metric. 
 
 ## 3. Report
 After doing the implementation of NERF, report your results in a .pdf file. 
