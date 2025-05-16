@@ -68,7 +68,6 @@ class Nerf(nn.Module):
         self.Ldir = Ldir
         
     def positional_encoding(self, x, L):
-        out=[]
         '''
         The original NeRF paper proposes using positional encoding with sinusoids at multiple frequencies,
         but it does not mention keeping the original input x. In practice, including x is crucial 
@@ -77,6 +76,7 @@ class Nerf(nn.Module):
         This implementation does not follow the original paper's suggestion.
         '''
         # x → [x, sin(2^0 * x), cos(2^0 * x), ..., sin(2^{L-1} * x), cos(2^{L-1} * x)]
+        out=[x]
         for j in range(L):
             out.append(torch.sin(2 ** j * x))
             out.append(torch.cos(2 ** j * x))
