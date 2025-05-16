@@ -1,7 +1,19 @@
 import torch
 
 def compute_accumulated_transmittance(betas):
-    accumulated_transmittance = torch.cumprod(betas, 1)     
+    """
+    Computes the accumulated transmittance along rays.
+
+    Args:
+        betas (torch.Tensor): A tensor of shape [num_rays, num_samples] containing
+                              the per-sample transmittance values (1 - alpha).
+
+    Returns:
+        torch.Tensor: Accumulated transmittance for each sample.
+    """
+    # TODO: Compute the cumulative product of betas along the sample dimension (dim=1)
+    # This represents how much light transmits from ray origin to each point
+    accumulated_transmittance =  
     return torch.cat((torch.ones(accumulated_transmittance.shape[0], 1, device=accumulated_transmittance.device),
                       accumulated_transmittance[:, :-1]), dim=1)
 

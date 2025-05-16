@@ -74,10 +74,12 @@ class Nerf(nn.Module):
         but it does not mention keeping the original input x. In practice, including x is crucial 
         — it provides the network with the raw spatial information needed to model low-frequency components,
         making the representation both richer and more stable.
+        This implementation does not follow the original paper's suggestion.
         '''
-        
-        # TODO 4: Implement positional encoding:
         # x → [x, sin(2^0 * x), cos(2^0 * x), ..., sin(2^{L-1} * x), cos(2^{L-1} * x)]
+        for j in range(L):
+            out.append(torch.sin(2 ** j * x))
+            out.append(torch.cos(2 ** j * x))
         return torch.cat(out, dim=1)
             
                                     
