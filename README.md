@@ -20,8 +20,13 @@ You will need to train the model by running:
 
 `python nerf_train.py`
 
+### 2.4 Mesh reconstruction
+After training the model, you can run mesh_reconstruction.py to save the mesh:
+`python mesh_reconstruction.py`
+
 ### 2.4 Optimize (40 pts)
 Run the test.py to test model. Optimize the model to have the best results with PSNR metric. 
+`python test.py`
 
 ## 3. Report
 After doing the implementation of NERF, report your results in a .pdf file. 
